@@ -1,0 +1,28 @@
+page {
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  --search-padding: 10px 0;
+}
+.banner {
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.van-search {
+  background-color:#fff !important;
+}
+.banner-item {
+}
+.banner-img {
+  width: 100%;
+}
+.hot-music {
+  white-space: nowrap;
+  /* display: flex; */
+}
+.hot-item {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 300rpx;
+  width: 300rpx;
+}

@@ -1,0 +1,9 @@
+<view class="hot-item">
+<view class="img-container">
+<image class = "img" src="{{hotMusic.coverImgUrl}}" mode="widthFix"/>
+<view class="count">{{hotMusic.playCount}}</view>
+</view>
+<view class="text">
+<text>{{hotMusic.name}}</text>
+</view>
+</view>

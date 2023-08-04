@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "header": "/components/header/header",
+    "recommend-item": "/components/recommend-item/recommend-item",
+    "hot-item": "/components/hot-item/hot-item"
+  }
+}

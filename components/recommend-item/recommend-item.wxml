@@ -1,0 +1,10 @@
+<view class="recommend-item">
+<image  class="img" src="{{recommend.al.picUrl}}" mode="widthFix"/>
+<view class="content">
+<view class="text">
+<text class="song">{{recommend.name}}</text>
+<text class="name">{{recommend.ar[0].name}}</text>
+</view>
+<van-icon name="arrow" class="icon"/>
+</view>
+</view>

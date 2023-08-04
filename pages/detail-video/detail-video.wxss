@@ -1,0 +1,15 @@
+.video {
+  width: 100%;
+}
+.mv-info {
+  font-size: 32rpx;
+  color: rgb(139, 139, 145);
+}
+.mv-info .music-name {
+  font-weight: 700;
+  font-size: 48rpx;
+  color: rgb(9, 2, 16);
+}
+.mv-info .item {
+  margin: 12rpx;
+}

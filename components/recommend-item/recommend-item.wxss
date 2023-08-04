@@ -1,0 +1,31 @@
+.recommend-item {
+  margin: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  border-radius: 15rpx;
+  width: 120rpx;
+}
+.song {
+  margin: 10rpx;
+  font-size: 38rpx;
+}
+.name {
+  color: rgb(162, 156, 156);
+  margin: 10rpx;
+  font-size: 30rpx;
+}
+.icon {
+  font-size: 30rpx;
+  color: rgb(162, 156, 156);
+}

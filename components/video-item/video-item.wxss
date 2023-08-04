@@ -1,0 +1,40 @@
+.video-item {
+  margin: 10rpx 0;
+}
+.image-container {
+  position: relative;
+  /* border-radius: 8rpx; */
+}
+.image-container .img {
+  border-radius: 20rpx;
+  border-radius: 8rpx;
+  width: 100%;
+}
+.info-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 24rpx;
+}
+.info-container .img{
+  width: 48rpx;
+  height: 48rpx;
+  margin: 3rpx;
+}
+.duration {
+  margin: 3rpx;
+}
+.play-count {
+  display: flex;
+  align-items: center;
+}
+/* 标题和作者容器 */
+.title-container {
+  font-size: 30rpx;
+  color: rgb(15, 6, 5);
+}

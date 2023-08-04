@@ -1,0 +1,20 @@
+.header {
+  margin: 20rpx 0 ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 42rpx;
+  font-weight: 700;
+  color: rgb(52, 52, 52);
+}
+.more {
+  font-size: 32rpx;
+  color: rgb(162, 156, 156);
+  display: flex;
+  justify-content: space-around;
+}
+.more-text {
+  margin: 0 5rpx;
+}

@@ -1,0 +1,22 @@
+function padLeft(time) {
+  //个位数加一个0，两位数不用加0
+  var time = time + ''
+ return ("00" + time).slice(time.length)
+}
+function formatTime(time) {
+  //获取分秒并取整
+  time = parseInt(time) / 1000
+  if(time >=  60) {
+    var minute = Math.floor(time / 60)
+    var second = Math.floor(time % 60)
+  }
+  return padLeft(minute) + ":" + padLeft(second)
+}
+function formatNum(value) {
+  value = parseFloat(value)
+  return (value / 10000).toFixed(1) + '万';
+}
+module.exports = {
+  formatTime : formatTime,
+  formatNum : formatNum
+}
