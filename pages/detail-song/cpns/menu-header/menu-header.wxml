@@ -1,0 +1,28 @@
+<view class="menu-header" style="background-image: url({{headerInfo.coverImgUrl}});">
+  <view class="blurry-overlay"></view>
+  <view class="content">
+    <view class="container">
+      <image class="img" src="{{headerInfo.coverImgUrl}}" mode="widthFix" />
+    </view>
+    <view class="text">
+      <text class="title">{{headerInfo.name}}</text>
+      <view class="person">
+        <image class="img" src="{{headerInfo.tracks[0].al.picUrl}}" mode="widthFix" />
+        <text class="person-name">{{headerInfo.tracks[0].al.name}}</text>
+      </view>
+      <view class="introduce">
+        简介：{{headerInfo.description}}
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="favor">
+    <image class="icon" src="/assets/imgs/favor.png" mode="widthFix"/>
+    <text>{{headerInfo.subscribedCount}}</text>
+    </view>
+    <view class="share">
+    <image class="icon" src="/assets/imgs/share.png" mode="widthFix"/>
+      <text>分享</text>
+    </view>
+  </view>
+</view>

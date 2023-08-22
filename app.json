@@ -2,15 +2,16 @@
   "pages": [
     "pages/main-music/main-music",
     "pages/main-video/main-video",
-    "pages/detail-video/detail-video",
     "pages/search/search",
-    "pages/more-detail/more-detail"
+    "pages/more-detail/more-detail",
+    "pages/detail-song/detail-song"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "TxMusic",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
   },
   "tabBar": {
     "list": [
@@ -28,5 +29,19 @@
       }
     ]
   },
+  "subPackages": [
+    {
+      "root": "packageVideo",
+      "pages": [
+        "pages/detail-video/detail-video"
+      ]
+    },
+    {
+      "root": "packagePlayer",
+      "pages": [
+        "pages/music-player/music-player"
+      ]
+    }
+  ],
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,60 @@
+<wxs src="/utils/format.wxs" module="format" />
+<image class="img" src="{{songInfo.al.picUrl}}" mode="aspectFill" />
+<view class="cover"></view>
+<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+<view class="nav">
+  <van-nav-bar left-arrow bind:click-left="onClickLeft">
+    <view class="title" slot="title">
+      <view wx:for="{{title}}" wx:key="*this" class="{{ currentPage === index ? 'active' : ''}}" bindtap="titleClick" data-index="{{index}}">
+        {{item}}<text class="split" wx:if="{{index !== title.length - 1}}">|</text></view>
+    </view>
+  </van-nav-bar>
+</view>
+<swiper bindchange="siwperChange" class="swiper" current="{{currentPage}}" style="height: {{contentHeight}}px">
+  <swiper-item class="main">
+    <view class="content">
+      <image class="image" src="{{songInfo.al.picUrl}}" />
+      <view class="song-name">{{songInfo.name}}</view>
+      <view class="singer">{{songInfo.ar[0].name}}</view>
+      <view class="lyric">{{lyric[currentIndex].text}}</view>
+    </view>
+    <view class="control">
+      <slider value="{{sliderValue}}" class="slider" bindchange="sliderChange" block-size="12" />
+      <view class="time">
+        <view class="current">{{format.formatTime(currentTime)}}</view>
+        <view class="duration">{{format.formatTime(durationTime) }}</view>
+      </view>
+      <view class="btn">
+        <image hidden="{{playType !== 0}}" bindtap="changePlay" class="pic"
+        src="/assets/imgs/order.png"/>
+        <image bindtap="changePlay" 
+        hidden="{{playType !== 1}}" class="pic" 
+        src="/assets/imgs/cycle.png" />
+        <image bindtap="changePlay" 
+        hidden="{{playType !== 2}}" class="pic" src="/assets/imgs/random.png" />
+        <image class="pic" bindtap="playLast" src="/assets/imgs/last.png" />
+        <image wx:if="{{play}}" bindtap="playClick" class="pic stop" src="/assets/imgs/start.png" />
+        <image bindtap="playClick" wx:if="{{!play}}" class="pic stop" src="/assets/imgs/stop.png" />
+        <image class="pic"
+        bindtap="playNext" 
+        src="/assets/imgs/next.png" />
+        <image class="pic" src="/assets/imgs/list.png" />
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+  <scroll-view
+  scroll-top="{{lyricScrollTop}}"
+  class="lyric-list" 
+  scroll-y>
+    <block wx:for="{{lyric}}" wx:key="time">
+      <view
+      class="lyric {{currentIndex === index ? 'lyric-active' : ''}}"
+      style="padding-top: {{index === lyric.length - 1 ? contentHeight / 2 : 0}}px;"
+      style="padding-top: {{index === 0 ? contentHeight / 2 : 0}}px;">
+      {{item.text}}
+      </view>
+    </block>
+  </scroll-view>
+  </swiper-item>
+</swiper>

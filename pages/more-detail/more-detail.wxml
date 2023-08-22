@@ -1,2 +1,8 @@
-<!--pages/more-detail/more-detail.wxml-->
-<text>pages/more-detail/more-detail.wxml</text>
+<view class="menu" wx:for="{{allSongMenu}}" wx:key="*this">
+<view class="text">{{item.data.cat}}</view>
+<view class="menu-list">
+<block wx:for="{{item.data.playlists}}" wx:key="id" wx:for-item="song">
+  <hot-item hotMusic="{{song}}" class="hot-item"></hot-item>
+</block>
+</view>
+</view>

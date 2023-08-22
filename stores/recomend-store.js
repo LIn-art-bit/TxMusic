@@ -7,7 +7,7 @@ export const recommendStore = new HYEventStore({
   actions: {
     fetchRecommend(ctx) {
       getRecomend(3778678).then((res) =>{
-        ctx.recommendList = res.data.playlist.tracks
+        ctx.recommendList = res.data.playlist
       })
     }
   }

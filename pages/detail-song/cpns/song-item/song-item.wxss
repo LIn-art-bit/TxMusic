@@ -1,0 +1,36 @@
+.song-item {
+  /* margin: 10rpx; */
+  display: flex;
+  align-items: center;
+}
+.music {
+  font-size: 30rpx;
+}
+.img {
+  width: 30rpx;
+  /* height: 20rpx; */
+  margin-right: 8rpx;
+}
+
+.name {
+  font-size: 25rpx;
+  color: rgb(165, 165, 154);
+}
+
+.singer {
+  margin:10rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.index {
+  font-size: 28rpx;
+  color: rgb(22, 22, 1);
+}

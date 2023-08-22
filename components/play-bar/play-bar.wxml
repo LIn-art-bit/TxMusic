@@ -1,0 +1,14 @@
+<view class="play-bar" wx:if="{{currentsong.name}}">
+<view class="left">
+  <image src="{{currentsong.al.picUrl}}"
+  class="header-img album-anim" 
+  style="animation-play-state: {{currentplay ? 'running' : 'paused'}};"/>
+  <text class="song-name">{{currentsong.name}}</text>
+</view>
+<view class="btn">
+<image class ="play"
+bindtap="playClick" 
+src="../../assets/imgs/{{currentplay ? 'start' : 'stop'}}.png"/>
+<image class="list" src="../../assets/imgs/list.png"/>
+</view>
+</view>

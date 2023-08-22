@@ -1,1 +1,22 @@
-/* pages/more-detail/more-detail.wxss */
+page {
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 0 12rpx;
+  --search-padding: 10px 0;
+}
+.menu {
+  margin: 24rpx 0;
+}
+.text {
+  font-size: 36rpx;
+  margin: 15rpx;
+  font-weight: 700;
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.hot-item {
+  width: 47%;
+}

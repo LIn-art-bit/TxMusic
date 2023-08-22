@@ -1,0 +1,20 @@
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view 
+class="rank-item" 
+wx:if="{{rankInfo.name}}"
+bindtap="rankClick">
+<view class="left">
+<view class="title">{{rankInfo.name}}</view>
+<block wx:for="{{3}}" wx:key="*this">
+  <view class="item">
+  <text class="text">{{item + 1}}. </text>
+  <text class="text">{{rankInfo.tracks[item].name}} - </text>
+  <text class="text">{{rankInfo.tracks[item].ar[0].name}}</text>
+  </view>
+</block>
+</view>
+<view class="right">
+<image class="img" src="{{rankInfo.coverImgUrl}}" mode="widthFix"/>
+<view class="count">{{format.formatBigNum(rankInfo.playCount)}}</view>
+</view>
+</view>

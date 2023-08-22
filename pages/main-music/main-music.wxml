@@ -1,16 +1,43 @@
 <van-search value="{{ value }}" shape="round" bind:click-input="onSearchClick" placeholder="请输入搜索关键词" />
-<swiper circular indicator-dots style="height: {{bannerHeigt}}px" class="banner">
+<swiper circular indicator-dots class="banner" style="height: {{bannerHeigt}}px">
   <block wx:for="{{banners}}" wx:key="targetId">
     <swiper-item class="banner-item">
       <image bindload="imgLoad" class="banner-img" src="{{item.imageUrl}}" mode="widthFix" />
     </swiper-item>
   </block>
 </swiper>
-<view class="recommend">
-  <header title="歌曲推荐" bind:moreClick="moreClick"></header>
-  <recommend-item wx:for="{{recommendList}}" wx:key="id" recommend="{{item}}"></recommend-item>
+<view class="recommend" wx:if="{{recommendList.length}}">
+  <header title="歌曲推荐" bind:moreClick="recommendClick"></header>
+  <recommend-item
+  data-index="{{index}}"
+  bind:itemClick="itemClick" 
+  wx:for="{{recommendList}}" 
+  wx:key="id" recommend="{{item}}"/>
 </view>
-<header title="热门歌单" bind:moreClick="moreClick"></header>
-<scroll-view class="hot-music" scroll-x="true">
+<header title="热门歌单" 
+bind:moreClick="moreClick"
+wx:if="{{hotList.length}}"
+></header>
+<view class="hot-music"  style="width: {{screenWidth}}px">
+  <scroll-view class="scroll-list" scroll-x="true">
     <hot-item hotMusic="{{item}}" wx:for="{{hotList}}" wx:key="id" class="hot-item"></hot-item>
-</scroll-view>
+  </scroll-view>
+</view>
+<header title="推荐歌单" 
+bind:moreClick="moreClick"
+wx:if="{{recommendMenu.length}}"
+></header>
+<view class="hot-music"  style="width: {{screenWidth}}px">
+  <scroll-view class="scroll-list" scroll-x="true">
+    <hot-item hotMusic="{{item}}" wx:for="{{recommendMenu}}" wx:key="id" class="hot-item"></hot-item>
+  </scroll-view>
+</view>
+<header title="巅峰榜" 
+hasMore="{{false}}"
+wx:if="{{rankInfo.newRank.id && rankInfo.orginRank.id && rankInfo.upRank.id}}"></header>
+<view class="rank-list">
+  <block wx:for="{{rankInfo}}" wx:key="index">
+  <rank-item rankInfo="{{item}}" key = "{{index}}"></rank-item>
+</block>
+</view>
+<play-bar class="play-bar"></play-bar>

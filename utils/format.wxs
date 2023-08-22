@@ -9,14 +9,22 @@ function formatTime(time) {
   if(time >=  60) {
     var minute = Math.floor(time / 60)
     var second = Math.floor(time % 60)
+    return padLeft(minute) + ":" + padLeft(second)
   }
-  return padLeft(minute) + ":" + padLeft(second)
+  else {
+    return padLeft(0) + ":" + padLeft(Math.floor(time))
+  }
 }
 function formatNum(value) {
   value = parseFloat(value)
   return (value / 10000).toFixed(1) + '万';
 }
+function formatBigNum(value) {
+  value = parseFloat(value)
+  return (value / 100000000).toFixed(1) + '亿';
+} 
 module.exports = {
   formatTime : formatTime,
-  formatNum : formatNum
+  formatNum : formatNum,
+  formatBigNum: formatBigNum
 }

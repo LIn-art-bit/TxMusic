@@ -1,0 +1,40 @@
+.play-bar {
+  background-color: #fff;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.play, .list {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 12rpx;
+}
+.header-img {
+  position: relative;
+  left: 0;
+  bottom: 12rpx;
+  margin: 12rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  display: flex;
+  align-items: center;
+}
+.album-anim {
+  animation: rotateAnim 10s linear infinite;
+}
+@keyframes rotateAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+ }

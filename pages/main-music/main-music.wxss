@@ -1,7 +1,7 @@
 page {
   background-color: #fafafa;
   box-sizing: border-box;
-  padding: 0 24rpx;
+  padding: 0 18rpx;
   --search-padding: 10px 0;
 }
 .banner {
@@ -11,18 +11,30 @@ page {
 .van-search {
   background-color:#fff !important;
 }
-.banner-item {
-}
 .banner-img {
   width: 100%;
 }
-.hot-music {
+.scroll-list {
   white-space: nowrap;
-  /* display: flex; */
+}
+.scroll-list:last-of-type {
+  margin-left: -18rpx;
 }
 .hot-item {
   display: inline-block;
-  flex-shrink: 0;
-  height: 300rpx;
-  width: 300rpx;
+  height: 250rpx;
+  width: 250rpx;
+  margin: 10rpx;
+}
+.rank-list {
+  padding: 12rpx 0;
+}
+.play-bar {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.scroll-list ::-webkit-scrollbar {
+  display: none;
 }

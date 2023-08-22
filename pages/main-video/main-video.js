@@ -40,7 +40,7 @@ Page({
   videoItemClick(event) {
     this.data.id = event.currentTarget.dataset.item.id
     wx.navigateTo({
-      url: `/pages/detail-video/detail-video?id=${this.data.id}`,
-    })
+      url: `/packageVideo/pages/detail-video/detail-video?id=${this.data.id}`,
+    }) 
   }
 })

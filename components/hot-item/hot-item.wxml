@@ -1,9 +1,8 @@
-<view class="hot-item">
+<wxs module="format" src="../../utils/format.wxs"></wxs>
+<view class="hot-music" bindtap="menuClick">
 <view class="img-container">
 <image class = "img" src="{{hotMusic.coverImgUrl}}" mode="widthFix"/>
-<view class="count">{{hotMusic.playCount}}</view>
+<view class="count">{{format.formatNum(hotMusic.playCount)}}</view>
 </view>
-<view class="text">
-<text>{{hotMusic.name}}</text>
-</view>
+<view class="text">{{hotMusic.name}}</view>
 </view>

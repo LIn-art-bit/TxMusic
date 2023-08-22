@@ -4,6 +4,8 @@
     "van-search": "@vant/weapp/search/index",
     "header": "/components/header/header",
     "recommend-item": "/components/recommend-item/recommend-item",
-    "hot-item": "/components/hot-item/hot-item"
+    "hot-item": "/components/hot-item/hot-item",
+    "rank-item": "/components/rank-item/rank-item",
+    "play-bar": "/components/play-bar/play-bar"
   }
 }

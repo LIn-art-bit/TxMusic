@@ -15,7 +15,7 @@ export function getRecomend(id) {
     }
   })
 }
-export function getHotMusic(cat = "全部", limt = 6, offset = 0) {
+export function getMenu(cat = "全部", limt = 6, offset = 0) {
   return TxRequest.get({
     url: "/top/playlist",
     data: {
@@ -23,5 +23,10 @@ export function getHotMusic(cat = "全部", limt = 6, offset = 0) {
       limt,
       offset
     }
+  })
+}
+export function getMenuTag() {
+  return TxRequest.get({
+    url: "/playlist/hot"
   })
 }

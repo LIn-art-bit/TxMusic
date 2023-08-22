@@ -1,0 +1,9 @@
+<wxs module="format" src="/utils/format.wxs"></wxs>
+<video class="video" src="{{mvUrl}}" referrer-policy="origin"/>
+<view class="mv-info">
+<view class="music-name item">{{mvInfo.name}}</view>
+<view class="airtist-name item">{{mvInfo.artistName}} -</view>
+<view class="play-info item">
+{{format.formatNum(mvInfo.duration)}}次播放 - {{mvInfo.publishTime}}
+</view>
+</view>

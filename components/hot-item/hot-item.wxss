@@ -1,41 +1,36 @@
 .hot-item {
-  /* width: 250rpx;
-  height: 250rpx; */
-  margin: 15rpx;
+  margin: 10rpx;
 }
 
 .img-container {
-  border-radius: 20rpx;
-  overflow: hidden;
+  border-radius: 25rpx;
   position: relative;
 }
 
 .img {
+  border-radius: 25rpx;
   width: 100%;
 }
-
 .count {
+  padding: 5rpx;
   border-radius: 10rpx;
-  text-align: center;
-  line-height: 50rpx;
+  line-height: 40rpx;
   color: #ffff;
-  height: 50rpx;
-  font-size: 15px;
-  background-color: rgb(117, 103, 102);
+  height: 40rpx;
+  font-size: 12px;
+  background-color: rgba(65, 62, 61, 0.507);
   position: absolute;
-  bottom: 8rpx;
-  right: 0;
+  bottom: 10rpx;
+  right: 4rpx;
 }
 
 .text {
-  height: 500rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-line-clamp: 2; 
-  -webkit-box-orient: vertical;
+  /* 强制双行显示 */
   overflow: hidden;
-  /* overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; */
+  /* 有关文字的属性会继承父元素所以要重置一下 */
+  white-space: normal; 
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
